@@ -55,11 +55,11 @@ public class PartidoDAOImpl implements PartidoDAO {
 
                 while (rs.next()) {
 
-                    int valor_ptos_local = rs.getInt("puntos_local");
-                    int ptos_local = rs.wasNull() ? null : valor_ptos_local;
+                    Integer valor_ptos_local = rs.getInt("puntos_local");
+                    Integer ptos_local = rs.wasNull() ? null : valor_ptos_local;
 
-                    int valor_ptos_visitante = rs.getInt("puntos_visitante");
-                    int puntos_visitante = rs.wasNull() ? null : valor_ptos_visitante;
+                    Integer valor_ptos_visitante = rs.getInt("puntos_visitante");
+                    Integer puntos_visitante = rs.wasNull() ? null : valor_ptos_visitante;
 
                     String SQLnombreLocal = """
                             SELECT DISTINCT
