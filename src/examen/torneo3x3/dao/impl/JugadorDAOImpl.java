@@ -19,7 +19,7 @@ public class JugadorDAOImpl implements JugadorDAO {
         // TODO: SELECT ... WHERE id_equipo = ? ORDER BY dorsal
         // altura_cm puede ser NULL
 
-        List<JugadorDTO> listaJugadores = null;
+        List<JugadorDTO> listaJugadores = new ArrayList<>();
 
         String SQL = """
                 SELECT
