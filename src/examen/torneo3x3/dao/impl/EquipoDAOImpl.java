@@ -59,15 +59,14 @@ public class EquipoDAOImpl implements EquipoDAO {
 
         String SQL = """
                 INSERT INTO 
-                    equipos (id_equipo, nombre)
+                    equipos (nombre)
                 VALUES
-                    (?, ?)
+                    (?)
                 """;
 
                 try (PreparedStatement pstmt = conn.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS)) {
 
-                    pstmt.setInt(1, equipo.idEquipo());
-                    pstmt.setString(2, equipo.nombre());
+                    pstmt.setString(1, equipo.nombre());
                 
                     try {
                         pstmt.executeUpdate();
