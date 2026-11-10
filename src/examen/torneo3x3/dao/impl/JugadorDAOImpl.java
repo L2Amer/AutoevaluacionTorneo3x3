@@ -32,6 +32,8 @@ public class JugadorDAOImpl implements JugadorDAO {
                     jugadores
                 WHERE
                     id_equipo = ?
+                ORDER BY
+                    dorsal
                 """;
 
         try (PreparedStatement pstmt = conn.prepareStatement(SQL)) {
